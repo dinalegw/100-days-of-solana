@@ -1,12 +1,13 @@
 {
   "name": "day-01",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Day 1: Solana wallet basics",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create-wallet": "node create-wallet.mjs",
+    "persistent-wallet": "node persistent-wallet.mjs"
   },
-  "keywords": [],
+  "keywords": ["solana", "wallet"],
   "author": "",
   "license": "ISC",
   "dependencies": {

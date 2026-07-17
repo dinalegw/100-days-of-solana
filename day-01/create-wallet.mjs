@@ -1,14 +1,6 @@
-import {
-  address,
-  createSolanaRpc,
-  devnet,
-} from "@solana/kit";
+import { generateKeyPairSigner } from "@solana/kit";
 
-const rpc = createSolanaRpc(devnet("https://api.devnet.solana.com"));
-const walletAddress = address("FkQW8vFXLtsvZHCkCViy1Gf9pKSKJeTdtAo1US4DtZF4");
+const wallet = await generateKeyPairSigner();
 
-const { value: balance } = await rpc.getBalance(walletAddress).send();
-const balanceInSol = Number(balance) / 1_000_000_000;
-
-console.log(`Wallet: ${walletAddress}`);
-console.log(`Balance: ${balanceInSol} SOL`);
+console.log(`Wallet: ${wallet.address}`);
+console.log("Fund this wallet from the devnet faucet before using it.");
