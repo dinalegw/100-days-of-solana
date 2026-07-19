@@ -1,0 +1,16 @@
+{
+  "name": "day-02",
+  "version": "1.0.0",
+  "description": "Day 2: Understanding SOL and Lamports",
+  "type": "module",
+  "scripts": {
+    "sol-vs-lamports": "node sol-vs-lamports.mjs",
+    "verify": "node verify.mjs"
+  },
+  "keywords": ["solana", "lamports", "sol"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@solana/kit": "^7.0.0"
+  }
+}

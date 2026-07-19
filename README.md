@@ -7,6 +7,7 @@ A structured, hands-on journey through Solana development — one day, one topic
 | Day | Topic | Code |
 |-----|-------|------|
 | 01  | Create & persist a wallet | [`day-01/`](day-01/) |
+| 02  | Understand SOL & Lamports | [`day-02/`](day-02/) |
 
 > More days added as the journey continues.
 
@@ -31,13 +32,22 @@ All examples target **devnet**. Get test SOL at [faucet.solana.com](https://fauc
 
 ## How to run any day
 
+From the **project root**:
+
+```bash
+npm install          # installs all day dependencies
+npm run <script>     # e.g. npm run create-wallet
+```
+
+Or from inside a day folder:
+
 ```bash
 cd day-XX
 npm install
 node <script>.mjs
 ```
 
-Each `day-XX/` folder is self-contained with its own `package.json`.
+Each `day-XX/` is a self-contained npm workspace. Available root scripts are listed under `scripts` in the root `package.json`.
 
 ## Security
 

@@ -1,0 +1,13 @@
+{
+  "name": "100-days-of-solana",
+  "private": true,
+  "workspaces": [
+    "day-*"
+  ],
+  "scripts": {
+    "create-wallet": "npm run -w day-01 create-wallet",
+    "persistent-wallet": "npm run -w day-01 persistent-wallet",
+    "sol-vs-lamports": "npm run -w day-02 sol-vs-lamports",
+    "verify-lamports": "npm run -w day-02 verify"
+  }
+}

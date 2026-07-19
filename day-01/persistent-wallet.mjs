@@ -14,7 +14,7 @@ async function loadOrCreateWallet() {
   try {
     // Try to load an existing wallet
     const data = JSON.parse(await readFile(WALLET_FILE, "utf-8"));
-    const secretBytes = new Uint8Array(data.secretKey);
+    const secretBytes = new Uint8Array(Array.isArray(data) ? data : data.secretKey);
     const wallet = await createKeyPairSignerFromBytes(secretBytes);
     console.log("Loaded existing wallet:", wallet.address);
     return wallet;
@@ -40,7 +40,7 @@ async function loadOrCreateWallet() {
 
     await writeFile(
       WALLET_FILE,
-      JSON.stringify({ secretKey: Array.from(keypairBytes) })
+      JSON.stringify(Array.from(keypairBytes))
     );
 
     const wallet = await createSignerFromKeyPair(keyPair);
